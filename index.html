@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indian Income Tax Calculator — WASM TUI</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/css/xterm.css">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #111318; color: #e7e9ee;
+           font: 15px/1.5 system-ui, sans-serif; display: grid; place-items: center; padding: 20px; }
+    main { width: min(100%, 900px); }
+    h1 { font-size: 1.25rem; margin: 0 0 6px; }
+    p { color: #aeb5c2; margin: 0 0 14px; }
+    #terminal { width: 100%; min-height: 440px; padding: 14px; border: 1px solid #343944;
+                border-radius: 10px; background: #08090c; overflow: hidden; }
+    .hint { margin-top: 10px; font-size: .9rem; }
+    .xterm { height: 410px; }
+    @media (max-width: 600px) { body { padding: 10px; } #terminal { padding: 6px; } .xterm { height: 390px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Indian Income Tax Calculator</h1>
+    <p>Your C program compiled to WebAssembly, running in a browser terminal.</p>
+    <div id="terminal" aria-label="Tax calculator terminal"></div>
+    <p id="status" class="hint" role="status">Keyboard: ↑/↓ move, Enter select, T change theme, Esc quit. Click the terminal first if keys do not respond.</p>
+  </main>
+  <script type="module" src="terminal.js"></script>
+</body>
+</html>
