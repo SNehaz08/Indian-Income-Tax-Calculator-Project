@@ -1,5 +1,7 @@
 # Income Tax Calculation Tool
 
+Click Here to use: https://snehaz08.github.io/Indian-Income-Tax-Calculator-Project/
+
 A lightweight Indian income-tax calculator written in C with a
 terminal-style user interface (TUI). It supports calculations under the
 New and Old Tax Regimes and can run in a browser through WebAssembly.
